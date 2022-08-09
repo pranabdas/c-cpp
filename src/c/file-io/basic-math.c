@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+// compile: gcc file.c -lm
 
 int main()
 {
@@ -9,6 +10,11 @@ int main()
 
     FILE *fp;
     fp = fopen("results.dat", "w");
+    if (fp == NULL)
+    {
+        printf("File could not be created.\n");
+        exit(1);
+    }
 
     for (ii = 0; ii < 100; ii++)
     {
@@ -27,4 +33,5 @@ int main()
         fprintf(fp, "%f\t%f\t%f\n", theta, result1, result2);
     }
     fclose(fp);
+    return 0;
 }
