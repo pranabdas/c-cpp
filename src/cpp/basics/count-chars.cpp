@@ -20,8 +20,8 @@ int main()
 
     // solution 2
     for (count = 0; message[count]; ++count)
-        ;
-    
+        ; // example of null statement
+
     cout << "Solution 2 ans: " << count << endl;
 
     // solution 3

@@ -1,9 +1,22 @@
 #include <iostream>
 #include <string>
+#include <cstring> // strcpy(), strcat()
 using namespace std;
 
 int main()
 {
+    char message1[] = "Hello world.";
+    cout << message1 << endl;
+
+    char message2[80] = "Have a great day.";
+    cout << message2 << endl;
+
+    // modify string
+    strcpy(message2, "Welcome to learning C++!");
+    strcat(message2, " Happy learning."); 
+    // if the array does not contain string already, use strcpy() instead
+    cout << message2 << endl;
+
     string userName;
     cout << "What is your name?" << '\n';
     getline(cin, userName);
