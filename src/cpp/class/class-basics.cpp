@@ -16,7 +16,10 @@ public:
 
     string get_fill_color(void);
     void set_fill_color(string);
+    circle translate_circle(double, double);
 
+    // only the members (variable and functions) of the class has access to the
+    // private members
 private:
     string fill_color;
 };
@@ -44,6 +47,16 @@ double perimeter(circle c)
     return 2.0 * M_PI * c.radius;
 }
 
+// we can return an object
+circle circle::translate_circle(double x, double y)
+{
+    circle new_circle;
+    new_circle.center_x = center_x + x;
+    new_circle.center_y = center_y + y;
+    new_circle.radius = radius;
+    return new_circle;
+}
+
 int main()
 {
     circle c;
@@ -59,8 +72,8 @@ int main()
     c.center_x = 0.0;
     c.center_y = 0.0;
     c.radius = 1.0;
-    // a class that has only public members, can be initialized with comma 
-    // separated values: 
+    // a class that has only public members, can be initialized with comma
+    // separated values:
     // circle c = {0.0, 0.0, 1.0};
 
     // let's copy the circle to another circle object
@@ -88,6 +101,12 @@ int main()
 
     c.set_fill_color("green");
     cout << "Fill color: " << c.get_fill_color() << endl;
+
+    circle c_tr = c.translate_circle(1.0, 1.0);
+    cout << "\nCircle c after translation\n";
+    cout << "X = " << c_tr.center_x << endl;
+    cout << "Y = " << c_tr.center_y << endl;
+    cout << "Radius = " << c_tr.radius << endl;
 
     return 0;
 }

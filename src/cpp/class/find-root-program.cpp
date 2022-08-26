@@ -3,7 +3,6 @@
 // the function is written in the file: `find-root.cpp`
 // this programs finds the roots of equation: a * x * x + b * x + c = 0
 #include <iostream>
-// #include "find-root.h"
 #include <tuple>
 #include <cmath>
 using namespace std;
