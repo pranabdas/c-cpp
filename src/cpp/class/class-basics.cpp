@@ -21,7 +21,8 @@ public:
     // only the members (variable and functions) of the class has access to the
     // private members
 private:
-    string fill_color;
+    string fill_color_; // we will use google style guide: `_` suffix for
+                        // private members
 };
 
 // we can define the function member outside the class definition
@@ -34,12 +35,12 @@ double circle::area(void)
 
 string circle::get_fill_color()
 {
-    return fill_color;
+    return fill_color_;
 }
 
 void circle::set_fill_color(const string fill)
 {
-    fill_color = fill;
+    fill_color_ = fill;
 }
 
 double perimeter(circle c)

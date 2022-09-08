@@ -41,5 +41,8 @@ int main()
         cout << "arr[" << i << "] = " << *(ptr_arr + i) << endl;
     }
 
+    // we can refer to the address of pointer as well
+    cout << "Address of ptr: " << &ptr << endl;
+
     return 0;
 }
