@@ -16,6 +16,9 @@ int main()
 
     // null pointer
     int *ptr_null = 0;
+    // alternatively
+    // ptr_null = NULL;
+    // ptr_null = nullptr;
     cout << "NULL pointer: " << ptr_null << endl;
 
     // type void*
