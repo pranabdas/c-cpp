@@ -2,9 +2,9 @@
 using namespace std;
 
 template <class T>
-
 inline void swap_numbers(T &i, T &j) 
 // there is a conflicting naming swap in namespace std
+// avoid using function name swap
 {
     T temp = i;
     i = j;

@@ -1,8 +1,8 @@
+// Generics or C++ templates
 #include <iostream>
 using namespace std;
 
 template <class T>
-
 T sum(T data[], int size = 5) // T is the generic type 
 // notice also the default parameter size
 {

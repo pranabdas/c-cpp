@@ -12,7 +12,11 @@ public:
 
     double real(void);
     double img(void);
-    // friend has access to private members
+    // friend has access to private members but itself is not a member
+    // friend function is necessary to take two arguments left and right of the
+    // operator. also the + operator is symmetric
+    // if we implement + operator overloading as a member function, it won't be
+    // symmetric
     friend complex operator+(const complex &, const complex &);
 
 private:

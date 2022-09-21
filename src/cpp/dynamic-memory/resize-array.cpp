@@ -2,6 +2,8 @@
 using namespace std;
 
 void resize_array(int *&arr, int current_size, int new_size)
+// *& means: reference to a pointer to an int
+// the function in can modify the pointer as well as the int
 {
     if (current_size == new_size)
     {
@@ -45,6 +47,7 @@ int main()
     }
 
     int new_size = 6;
+    // arr is a pointer
     resize_array(arr, size, new_size);
 
     for (int i = 0; i < new_size; i++)

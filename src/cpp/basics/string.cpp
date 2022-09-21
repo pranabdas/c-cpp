@@ -11,10 +11,30 @@ int main()
     char message2[80] = "Have a great day.";
     cout << message2 << endl;
 
+    // one of the crucial difference between a char array and regular array is
+    // that when we initialize char array with string literal, it includes a
+    // termination `\0` character in the end, so
+    // char message[] = "test";
+    // is equivalent to
+    // char message[] = {'t', 'e', 's', 't', '\0'};
+    // the termination character `\0` is critical for various string
+    // manipulation methods
+
+    // we cannot reassign an char array with literal string, but we can we can
+    // reassign individual elements
+    // char message[20] = "test";
+    // message[0] = 'n';
+    // message[1] = 'e';
+    // message[2] = 'w';
+    // message[3] = '\0';
+
     // modify string
     strcpy(message2, "Welcome to learning C++!");
-    strcat(message2, " Happy learning."); 
+    strcat(message2, " Happy learning.");
     // if the array does not contain string already, use strcpy() instead
+    // because uninitialized char array might not have `\0` end string character
+    // if the char array holds valid string with `\0` ending, we can safely use
+    // strcat()
     cout << message2 << endl;
 
     string userName;
@@ -55,7 +75,7 @@ int main()
     // in case of multiple matches, return position of first match
     // string search with a starting index: str.find("look", starting_index)
 
-    if (my_string.find("aa") == string::npos)  // can be used to find no-match
+    if (my_string.find("aa") == string::npos) // can be used to find no-match
     {
         cout << "Not Found.\n";
     }
