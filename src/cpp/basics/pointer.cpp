@@ -1,5 +1,9 @@
 // pointers are variables for storing memory addresses
 // type of pointer is tied to the type of variable address it stores
+
+// (1) the pointer must be allocated,
+// (2) the pointee must be allocated,
+// (3) the pointer must be assigned to point to the pointee.
 #include <iostream>
 using namespace std;
 
@@ -8,11 +12,16 @@ int main()
     int x = 10;   // declare and assign a integer variable
     int *ptr;     // declare an integer pointer
                   // Note that pointers do not declare memory
+                  // A pointer must be assigned a pointee, before the pointer
+                  // can be dereferenced. This is a major source of pointer bugs
     ptr = &x;     // `&` operator returns the address of a variable
     int y = *ptr; // dereference the pointer variable to get its value
 
+    // The assignment operation (=) between two pointers make them point to the
+    // same pointee. This is called sharing.
+
     // the dereference operator * can appear on the left side of an assignment
-    // we can assign a new value ot x by:
+    // we can assign a new value to x by:
     // *ptr = 20;
 
     // pointer to const: a non-constant pointer cannot point to constant var

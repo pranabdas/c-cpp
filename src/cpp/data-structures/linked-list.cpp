@@ -82,9 +82,9 @@ void delete_head(LinkedList *&head)
 
 int main()
 {
-    // let's define out head pointer first
+    // let's define our head pointer first
     // head pointer points to the first element of the linked list
-    // head pointer also used to refer to the linked list
+    // head pointer also used to refer to the linked list as a whole
     LinkedList *head;
     head = new LinkedList;
     // assign the first element of the linked list

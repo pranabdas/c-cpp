@@ -12,7 +12,7 @@ using namespace std;
 // void fn(const float &x);
 inline void swap(int &i, int &j)
 {
-    int temp = i;
+    int temp = i; // no dereferencing * is required, compiler handles it
     i = j;
     j = temp;
 }
@@ -39,7 +39,7 @@ int main()
     // appropriate values in the calling environment (say in the main), instead
     // of returning values. Alternatively, we can return tuple which can hold
     // multiple values.
-    swap(m, n);
+    swap(m, n); // no addressing & is required, compiler handles it
     cout << "Outputs: " << m << ", " << n << endl;
 
     double x = 5.4, y = 1.2;
