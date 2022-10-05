@@ -7,7 +7,9 @@ Author: Pranab Das (GitHub: @pranabdas)
 Date: 04-Aug-2022
 
 Note: Pitfall of recursive function: Fibonacci has an exponential number of
-calls that require lots of stack space and extra time.
+calls that require lots of stack space and extra time. The computer might
+eventually run out of stack memory, and cause stack overflow error. In Linux
+the program will then crash with segmentation fault.
 =============================================================================*/
 #include <stdio.h>
 
@@ -29,5 +31,6 @@ int main()
         fib = fibonacci(i);
         printf("F(%d) = %ld\n", i, fib);
     }
+    
     return 0;
 }

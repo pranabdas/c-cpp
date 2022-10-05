@@ -22,7 +22,9 @@ int main()
     cout << "Time taken = "
          << static_cast<double>(time_finish - time_start) / CLOCKS_PER_SEC
          << " seconds.\n";
+    // the above gives the processor time, not the wall time
 
     return (EXIT_SUCCESS);
     // we do not need to know correct exit flag which is 0
+    // use of EXIT_SUCCESS is more portable than using 0
 }

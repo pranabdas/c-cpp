@@ -17,8 +17,7 @@ int main()
     for (i = 0; i < 5; i++)
     {
         printf("arr[%d] = %d at %p\n", i, *(ptr + i), ptr + i);
-        // *(ptr + 1) does not mean 1 is added to ptr, it refers to the next
-        // pointer address
+        // *(ptr + 1) refers to the next pointer address
     }
 
     return 0;

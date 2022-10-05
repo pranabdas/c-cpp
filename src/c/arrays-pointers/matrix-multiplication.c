@@ -13,14 +13,14 @@
 
 #include <stdio.h>
 
-main()
+int main()
 {
     int a, b, c, d, i, j, k;
     double x[10][10], y[10][10], z[10][10];
 
-    printf("Enter the dimension of the first  matrix:");
+    printf("Enter the dimensions of the first  matrix (m n): ");
     scanf("%d %d", &a, &b);
-    printf("Enter the dimension of the second matrix:");
+    printf("Enter the dimensions of the second matrix (n p): ");
     scanf("%d %d", &c, &d);
 
     if (b == c)
@@ -30,8 +30,8 @@ main()
         {
             for (j = 0; j < b; j++)
             {
-                printf("X[%d][%d]=", i + 1, j + 1);
-                scanf("%d", &x[i][j]);
+                printf("X[%d][%d] = ", i + 1, j + 1);
+                scanf("%lg", &x[i][j]);
             }
         }
 
@@ -40,12 +40,12 @@ main()
         {
             for (j = 0; j < d; j++)
             {
-                printf("Y[%d][%d]=", i + 1, j + 1);
-                scanf("%d", &y[i][j]);
+                printf("Y[%d][%d] = ", i + 1, j + 1);
+                scanf("%lg", &y[i][j]);
             }
         }
 
-        printf("\nAns...\n\n");
+        printf("\nAns =\n\n");
 
         for (i = 0; i < a; i++)
         {
@@ -56,7 +56,7 @@ main()
                 {
                     z[i][j] = z[i][j] + x[i][k] * y[k][j];
                 }
-                printf("%d\t", z[i][j]);
+                printf("%lg\t", z[i][j]);
             }
             printf("\n\n");
         }
@@ -67,6 +67,6 @@ main()
         printf("\nSorry!!! This multiplication is not possible.\n");
         printf("??? Inner matrix dimensions must agree.\n");
     }
-    printf("\nPress any key to exit...");
-    getch();
+    
+    return 0;
 }

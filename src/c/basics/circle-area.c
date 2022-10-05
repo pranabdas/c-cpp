@@ -7,6 +7,8 @@ Date: 04-Aug-2022
 #include <stdio.h>
 
 #define PI 3.14159
+// preprocessor statement: it tells the compiler to replace instances of PI with
+// its defined value
 
 int main()
 {

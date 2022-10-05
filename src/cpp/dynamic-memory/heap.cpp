@@ -18,8 +18,8 @@ int main()
     //     exit(1);
     // }
 
-    // however the above is not necessary for ANSI C++ compliant compiles will
-    // throw a system error and terminate the program
+    // however the above is not necessary for ANSI C++ compliant compilers
+    // which will throw a system error and terminate the program
 
     cout << "Address ptr: " << ptr << endl;          // it is a heap memory address
     cout << "Value stored at ptr: " << *ptr << endl; // value is stored in heap

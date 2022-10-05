@@ -23,11 +23,12 @@ int main()
     printf("Size of double = %d bytes\n", sizeof(double));
     printf("Size of long double = %d bytes\n", sizeof(long double));
     /* float has 6 significant digits, while double and long double have 15 and
-    31, respectively. float ranges are 1e-38 to 1e+38, both double and long double
-    both have range 1e-308 to 1e+308.
-    To print output in exponet we can use %e or %g which will automatically decide
-    between %f or %e */
+    31, respectively. float ranges are 1e-38 to 1e+38, both double and long
+    double both have range 1e-308 to 1e+308.
+    To print output in exponent we can use %e (or %g which will automatically
+    decide between %f or %e as appropriate) */
     printf("Size of char = %d bytes\n", sizeof(char));
     printf("Size of ch = %d bytes\n", sizeof(ch));
+
     return 0;
 }

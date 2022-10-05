@@ -9,15 +9,14 @@ int main()
     if (chunk == NULL)
     {
         puts("Memory allocation failed!\n");
-        // fprintf(stderr, "Memory allocation failed!\n");
-        // exit(1);
+        fprintf(stderr, "Memory allocation failed!\n");
+        exit(1);
     }
-
     else
     {
         printf("1024 bytes of memory allocated at %p\n", chunk);
-        free(chunk);  // this frees the memory even when program runs
-        // buffer is always cleared when the program exits therefore it is 
+        free(chunk); // this frees the memory even when program runs
+        // buffer is always cleared when the program exits therefore it is
         // unnecessary to free the buffer just before program exits
         chunk = NULL; // it is always recommended to set the pointer to NULL
                       // after buffer is freed
