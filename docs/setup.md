@@ -1,9 +1,18 @@
-# Programming in C and C++
+---
+title: Setting up C/C++ compiler
+sidebar_label: Setup
+slug: /
+keywords: ["C programming", "C++ programming", "scientific programming", "numerical programming", "numerical integration"]
+---
+I will be using GNU C Compiler (GCC) to compile codes in a Linux computer. You
+can install GCC in Ubuntu/Debian by:
 
-Learning C and C++ languages.
+```bash
+apt install gcc
+```
 
-Compile:
-```console
+Command to compile:
+```bash
 gcc filename.c
 
 # linking math lib
@@ -17,7 +26,7 @@ g++ filename.cpp
 
 This would produce executable with default name `a.out`. You can specify the
 executable name by using the `-o` flag:
-```console
+```bash
 gcc filename.c -o program_name
 ```
 
@@ -28,13 +37,11 @@ various levels of optimization).
 Compiler (GCC/Clang) flags for warnings: `-Wall`, `-Wextra`, `-Wpedantic`,
 `-Wunused`.
 
-## Tools
 ### Cppcheck
-```console
+
+Sometimes I will be using `cppcheck` to debug codes as well.
+
+```bash
 apt install cppcheck
 cppcheck --enable=all filename.cpp 
 ```
-
-## Resources
-- <https://git.savannah.nongnu.org/cgit/c-intro-and-ref.git>
-- <https://www.gnu.org/software/libc/manual/html_node/index.html>

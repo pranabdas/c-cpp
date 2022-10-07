@@ -1,8 +1,3 @@
-/*=============================================================================
-Program: recursion to calculate factorial
-Author: Pranab Das (GitHub: @pranabdas)
-Date: 04-Aug-2022
-=============================================================================*/
 #include <stdio.h>
 
 // long allows factorial up to 20

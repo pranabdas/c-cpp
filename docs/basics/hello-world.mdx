@@ -1,0 +1,50 @@
+---
+title: Hello world
+---
+We will learn through writing code. It is customary start with "Hello world!"
+program when learning a new programming language. This program simply prints a
+message in the terminal indicating the code ran successfully.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
+<Tabs groupId="language">
+
+<TabItem value="C">
+
+import hello_world_c from '!!raw-loader!/src/c/basics/00-hello-world.c';
+
+<CodeBlock language="c" title="src/c/basics/00-hello-world.c" showLineNumbers>{hello_world_c}</CodeBlock>
+
+</TabItem>
+
+<TabItem value="C++">
+
+import hello_world_cpp from '!!raw-loader!/src/cpp/basics/00-hello-world.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/basics/00-hello-world.cpp" showLineNumbers>{hello_world_cpp}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+Compile the code:
+```bash
+# in case of C
+gcc filename.c
+
+# in case of C++
+g++ filename.cpp
+```
+
+It will produce an executable (binary) file named `a.out`. We can run the
+executable by typing:
+```bash
+./a.out
+```
+
+If you will to name your program something other than `a.out`, you can specify
+a custom name using `-o` flag:
+```bash
+gcc filename.c -o my_program
+```

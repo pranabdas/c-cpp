@@ -10,8 +10,10 @@ int main()
         cout << i << "\t" << i * i << endl;
         ++i;
     }
+
     cout << endl;
 
+    // do while loop
     i = 1;
     do
     {
