@@ -26,3 +26,27 @@ import add_two_integers_cpp from '!!raw-loader!/src/cpp/basics/01-add-two-intege
 
 </TabItem>
 </Tabs>
+
+:::danger
+
+```cpp
+int a = 123456789;
+long long b = a * a; // this is wrong, a * a will result in int type
+long long c = (long long) a * a; // or change the type of a to long long
+```
+
+:::
+
+
+:::caution
+
+It is risky to compare floating point numbers with `==` due to precision errors.
+Better approach is to check the difference is less than a small number:
+```cpp
+if (abs(a - b) < 1e-9)
+{
+    // a and b are equal
+}
+```
+
+:::

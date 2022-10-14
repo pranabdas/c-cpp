@@ -1,9 +1,3 @@
-/*=============================================================================
-Program: call by reference
-Author: Pranab Das (GitHub: @pranabdas)
-Date: 05-Aug-2022
-=============================================================================*/
-
 #include <stdio.h>
 
 void swap(int *i, int *j)

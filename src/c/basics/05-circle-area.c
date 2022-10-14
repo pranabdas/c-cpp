@@ -1,9 +1,3 @@
-/*=============================================================================
-Program: Calculate area of a circle given its radius
-Author: Pranab Das (GitHub: @pranabdas)
-Date: 04-Aug-2022
-=============================================================================*/
-
 #include <stdio.h>
 
 #define PI 3.14159

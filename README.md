@@ -1,6 +1,12 @@
-# Programming in C and C++
+<h1 align="center">Programming in C and C++</h1>
 
-Learning C and C++ languages.
+<p align="center">
+  <a href="https://github.com/pranabdas/c-cpp/actions/workflows/deploy-gh-pages.yml"><img src="https://github.com/pranabdas/c-cpp/actions/workflows/deploy-gh-pages.yml/badge.svg" alt="Deploy gh-pages status"></a>
+</p>
+
+Follow the tutorial here - <https://pranabdas.github.io/c-cpp/>
+
+## Quick start
 
 Compile:
 ```console
@@ -13,6 +19,9 @@ gcc filename.c -lm
 gcc -Wall filename.c
 
 g++ filename.cpp
+
+# specify certain standard
+g++ -std=c++17 filename.cpp
 ```
 
 This would produce executable with default name `a.out`. You can specify the
@@ -29,7 +38,9 @@ Compiler (GCC/Clang) flags for warnings: `-Wall`, `-Wextra`, `-Wpedantic`,
 `-Wunused`.
 
 ## Tools
+
 ### Cppcheck
+
 ```console
 apt install cppcheck
 cppcheck --enable=all filename.cpp 
@@ -38,3 +49,4 @@ cppcheck --enable=all filename.cpp
 ## Resources
 - <https://git.savannah.nongnu.org/cgit/c-intro-and-ref.git>
 - <https://www.gnu.org/software/libc/manual/html_node/index.html>
+- <https://developers.google.com/edu/c++/cpp-in-depth>

@@ -1,3 +1,35 @@
 ---
 title: Recursion
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
+<Tabs groupId="language">
+
+<TabItem value="C">
+
+import recursion_c from '!!raw-loader!/src/c/basics/06-recursive-factorial.c';
+
+<CodeBlock language="c" title="src/c/basics/06-recursive-factorial.c" showLineNumbers>{recursion_c}</CodeBlock>
+
+</TabItem>
+
+<TabItem value="C++">
+
+import recursion_cpp from '!!raw-loader!/src/cpp/basics/06-recursive-fibonacci.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/basics/06-recursive-fibonacci.cpp" showLineNumbers>{recursion_cpp}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+Recursion enables us to solve certain types of problems very elegantly, however
+there are certain downside to large numbers of recursive function calls; it 
+requires large amount of stack memory, and program might crash with stack
+overflow.
+
+:::

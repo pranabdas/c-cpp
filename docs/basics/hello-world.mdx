@@ -48,3 +48,23 @@ a custom name using `-o` flag:
 ```bash
 gcc filename.c -o my_program
 ```
+
+:::tip
+
+1. It is possible to include entire standard library in C++ (it is a feature of
+g++ compiler) by:
+```cpp
+#include <bits/stdc++.h>
+```
+
+2. Input and output streams can me made more efficient by including following in
+the beginning (inside main) of the program:
+```cpp
+ios::sync_with_stdio(0);
+cin.tie(0);
+```
+
+3. Use of newline `\n` is faster than `endl`, because `endl` always causes a
+flush operation.
+
+:::

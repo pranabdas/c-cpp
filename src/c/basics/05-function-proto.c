@@ -1,11 +1,8 @@
-/*=============================================================================
-Program: using function prototype, the definition can be placed after main()
-Author: Pranab Das (GitHub: @pranabdas)
-Date: 04-Aug-2022
-=============================================================================*/
 #include <stdio.h>
 
-float add(float, float);  // float add(float input1, float input2);
+// prototype declaration
+float add(float, float);  
+// float add(float input1, float input2);
 
 int main()
 {

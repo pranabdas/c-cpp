@@ -80,6 +80,11 @@ int main()
     // the above assignment is same as:
     // int *ptr_arr &arr[0];
 
+    // from Expert C Programming: there is one difference between an array name
+    // and a pointer that must be kept in mind. A pointer is a variable, so 
+    // pa=a and pa++ are legal. But an array name is not a variable; 
+    // constructions like a=pa and a++ are illegal.
+
     for (int i = 0; i < 3; i++)
     {
         cout << "arr[" << i << "] = " << *(ptr_arr + i) << endl;

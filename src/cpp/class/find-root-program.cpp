@@ -38,6 +38,7 @@ int main()
     return 0;
 }
 
+// one way to return multiple values from a function
 tuple<double, double> find_root(double a, double b, double c)
 {
     double root, root1, root2;

@@ -1,3 +1,52 @@
 ---
 title: Function
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
+<Tabs groupId="language">
+
+<TabItem value="C">
+
+import function_c from '!!raw-loader!/src/c/basics/05-circle-area.c';
+
+<CodeBlock language="c" title="src/c/basics/05-circle-area.c" showLineNumbers>{function_c}</CodeBlock>
+
+</TabItem>
+
+<TabItem value="C++">
+
+import function_cpp from '!!raw-loader!/src/cpp/basics/05-deg-c-f.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/basics/05-deg-c-f.cpp" showLineNumbers>{function_cpp}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+## Function prototype
+
+Prototype declaration can help with code organization. We can declare function
+prototype in the top of the file followed by main function, and finally place
+the body of prototyped functions in the bottom.
+
+import function_proto_c from '!!raw-loader!/src/c/basics/05-function-proto.c';
+
+<CodeBlock language="c" title="src/c/basics/05-function-proto.c" showLineNumbers>{function_proto_c}</CodeBlock>
+
+## Call by reference
+
+We can call by reference in order to update the values in the calling
+environment instead of returning function values. Here is an example in C++:
+
+import func_call_by_ref_cpp from '!!raw-loader!/src/cpp/basics/05-func-call-by-ref.cpp';
+
+<CodeBlock language="c" title="src/cpp/basics/05-func-call-by-ref.cpp" showLineNumbers>{func_call_by_ref_cpp}</CodeBlock>
+
+We can achieve the same using pointer as well, however syntax could be little
+difficult (I think):
+
+import func_swap_pointer_c from '!!raw-loader!/src/c/basics/05-swap-using-pointer.c';
+
+<CodeBlock language="c" title="src/c/basics/05-using-swap-pointer.c" showLineNumbers>{func_swap_pointer_c}</CodeBlock>
+

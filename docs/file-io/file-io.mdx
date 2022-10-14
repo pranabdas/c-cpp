@@ -1,0 +1,68 @@
+---
+title: File Input Output
+sidebar_label: File IO basics
+---
+## Write
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
+<Tabs groupId="language">
+
+<TabItem value="C">
+
+import write_file_c from '!!raw-loader!/src/c/file-io/01-write-file.c';
+
+<CodeBlock language="c" title="src/c/file-io/01-write-file.c" showLineNumbers>{write_file_c}</CodeBlock>
+
+</TabItem>
+
+<TabItem value="C++">
+
+import write_file_cpp from '!!raw-loader!/src/cpp/file-io/01-write-file.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/file-io/01-write-file.cpp" showLineNumbers>{write_file_cpp}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+## Read
+
+<Tabs groupId="language">
+
+<TabItem value="C">
+
+import read_file_c from '!!raw-loader!/src/c/file-io/02-read-file.c';
+
+<CodeBlock language="c" title="src/c/file-io/02-read-file.c" showLineNumbers>{read_file_c}</CodeBlock>
+
+</TabItem>
+
+<TabItem value="C++">
+
+import read_file_cpp from '!!raw-loader!/src/cpp/file-io/02-read-file.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/file-io/02-read-file.cpp" showLineNumbers>{read_file_cpp}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+## Append
+
+import append_file_cpp from '!!raw-loader!/src/cpp/file-io/03-append-file.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/file-io/03-append-file.cpp" showLineNumbers>{append_file_cpp}</CodeBlock>
+
+## Save buffer
+Saving and reading buffer as binary is faster than IO using formatted data.
+
+import save_buffer_c from '!!raw-loader!/src/c/file-io/04-save-buffer.c';
+
+<CodeBlock language="cpp" title="src/c/file-io/04-save-buffer.c" showLineNumbers>{save_buffer_c}</CodeBlock>
+
+## Read buffer
+
+import read_buffer_c from '!!raw-loader!/src/c/file-io/05-read-buffer.c';
+
+<CodeBlock language="cpp" title="src/c/file-io/05-read-buffer.c" showLineNumbers>{read_buffer_c}</CodeBlock>

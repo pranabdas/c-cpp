@@ -1,18 +1,16 @@
-/*=============================================================================
-Program: Array basics
-Author: Pranab Das (GitHub: @pranabdas)
-Date: 04-Aug-2022
-=============================================================================*/
-
 #include <stdio.h>
 
 int main()
 {
     const int SIZE = 5;
 
-    int array1[SIZE] = {0};
-    int array2[SIZE] = {1, 2, 3, 4, 5};
+    // int array1[SIZE] = {0}; // if the array size is not knowns compile time,
+                            // use heap dynamic memory
+    // int array2[SIZE] = {1, 2, 3, 4, 5};
     // some compiler might complain here, use 5 instead of SIZE
+    // fails in gcc, however works in apple clang
+    int array1[5] = {0};
+    int array2[5] = {1, 2, 3, 4, 5};
     int array3[] = {1, 2, 3, 4, 5};
 
     char str1[] = "hello";

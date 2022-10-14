@@ -22,6 +22,9 @@ gcc filename.c -lm
 gcc -Wall filename.c
 
 g++ filename.cpp
+
+# compile with specific standard (might require for latest language features)
+g++ -std=c++17 filename.cpp
 ```
 
 This would produce executable with default name `a.out`. You can specify the
