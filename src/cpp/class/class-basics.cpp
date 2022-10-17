@@ -1,3 +1,6 @@
+// class is a collection of variables (usually of different types), combined
+// with related functions (methods). Class members can be of any data type
+// including other classes
 #include <iostream>
 #include <cmath> // M_PI, pow
 using namespace std;

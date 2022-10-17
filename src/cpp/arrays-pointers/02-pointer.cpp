@@ -37,6 +37,9 @@ int main()
     // ++*pt_cx; // OK: cx is not constant
     // ++pt_cx;  // Not allowed: pt_cx is constant
 
+    // there could also be const pointer to const variable
+    // const int *const ptConst;
+
     // null pointer
     int *ptr_null = 0;
     // alternatively

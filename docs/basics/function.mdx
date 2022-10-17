@@ -41,7 +41,7 @@ environment instead of returning function values. Here is an example in C++:
 
 import func_call_by_ref_cpp from '!!raw-loader!/src/cpp/basics/05-func-call-by-ref.cpp';
 
-<CodeBlock language="c" title="src/cpp/basics/05-func-call-by-ref.cpp" showLineNumbers>{func_call_by_ref_cpp}</CodeBlock>
+<CodeBlock language="cpp" title="src/cpp/basics/05-func-call-by-ref.cpp" showLineNumbers>{func_call_by_ref_cpp}</CodeBlock>
 
 We can achieve the same using pointer as well, however syntax could be little
 difficult (I think):
@@ -49,4 +49,25 @@ difficult (I think):
 import func_swap_pointer_c from '!!raw-loader!/src/c/basics/05-swap-using-pointer.c';
 
 <CodeBlock language="c" title="src/c/basics/05-using-swap-pointer.c" showLineNumbers>{func_swap_pointer_c}</CodeBlock>
+
+## Inline function
+Inline function blocks are copied to the calling environment, instead of calling
+environment handling over control to the function. This reduces function call
+overheads, suitable for functions with minimal computation.
+
+import func_inline_cpp from '!!raw-loader!/src/cpp/basics/05-func-inline.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/basics/05-func-inline.cpp" showLineNumbers>{func_inline_cpp}</CodeBlock>
+
+## Default arguments
+
+import func_default_args_cpp from '!!raw-loader!/src/cpp/basics/05-func-default-args.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/basics/05-func-default-args.cpp" showLineNumbers>{func_default_args_cpp}</CodeBlock>
+
+## Function overloading
+
+import func_overloading_cpp from '!!raw-loader!/src/cpp/basics/05-func-overloading.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/basics/05-func-overloading.cpp" showLineNumbers>{func_overloading_cpp}</CodeBlock>
 

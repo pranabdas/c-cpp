@@ -66,6 +66,7 @@ module.exports = {
       items: [
         "misc/arg-parsing",
         "misc/bit-shifting",
+        "misc/multiple-return",
       ],
     },
     {

@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int *ptr = new int;
+    int *ptr = new int; // `new` returns memory address
     *ptr = 54;
     // we can declare and assign in the same line
     // double *pi_pt = new double(3.14159);
