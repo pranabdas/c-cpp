@@ -21,7 +21,7 @@ async function config() {
         prism: {
           theme: require("prism-react-renderer/themes/github"),
           darkTheme: require("prism-react-renderer/themes/nightOwl"),
-          additionalLanguages: ["c", "cpp", "docker"],
+          additionalLanguages: ["c", "cpp", "docker", "makefile"],
         },
         docs: {
           sidebar: {

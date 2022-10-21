@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    int iterations = 1000000;
+    int iterations = 1'000'000;
     double x_lower = -1.0;
     double y_lower = -1.0;
     double x_upper = 1.0;

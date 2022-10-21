@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int iter = 10000000;
+    int iter = 10'000'000;
     double test = 1.0;
     clock_t time_start = clock();
 

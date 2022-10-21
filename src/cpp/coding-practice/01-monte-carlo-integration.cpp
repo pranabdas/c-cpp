@@ -9,7 +9,7 @@ int main()
 {
     double x_lower = 1;
     double x_upper = 3;
-    int iterations = 1000000;
+    int iterations = 1'000'000;
 
     double y_lower = 0;
     double y_upper = pow(x_upper, 2);

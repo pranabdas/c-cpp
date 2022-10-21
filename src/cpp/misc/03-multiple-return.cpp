@@ -1,5 +1,6 @@
-// features of c++17 used, compile with:
-// g++ return-multiple-values.cpp -std=c++17
+// features of c++17 used, compile with C++17 or higher:
+// g++ -std=c++17 filename.cpp
+// g++ -std=c++2a filename.cpp
 #include <iostream>
 #include <tuple>
 using namespace std;
@@ -9,7 +10,7 @@ tuple<int, int> sq_tuple(int a, int b)
     return make_tuple(a * a, b * b);
 }
 
-// using structured binding feature of c++17
+// using structured binding feature introduced in c++17 standard
 tuple<int, int> sq_tuple_alt(int a, int b)
 {
     return {a * a, b * b};

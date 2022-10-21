@@ -25,6 +25,7 @@ g++ filename.cpp
 
 # compile with specific standard (might require for latest language features)
 g++ -std=c++17 filename.cpp
+g++ -std=c++2a filename.cpp
 ```
 
 This would produce executable with default name `a.out`. You can specify the
@@ -39,6 +40,26 @@ various levels of optimization).
 
 Compiler (GCC/Clang) flags for warnings: `-Wall`, `-Wextra`, `-Wpedantic`,
 `-Wunused`.
+
+### Makefile
+
+For large/complex projects with multiple source/header files and might require
+linking various various libraries, unix makefile is very helpful to write the
+compilation rules and build the program. Here is a very simple example:
+
+import CodeBlock from '@theme/CodeBlock';
+import makefile from '!!raw-loader!/src/cpp/basics/Makefile';
+
+<CodeBlock language="makefile" title="src/cpp/basics/Makefile" showLineNumbers>{makefile}</CodeBlock>
+
+A makefile is consists of a set of rules. A rule consists of a target, a list of
+prerequisites, and a command. In the above example, we have several rules:
+`all`, `hello`, `hello.o`, and `clean`. In case of `all`, we have prerequisite
+`hello`, while there is no command. In case of `hello`, prerequisite is `hello.o`
+and rule is: `${CC} -o hello hello.o` and so on. If we run `make` without any
+argument, the first rule will run, which is in this case `all`. We can run
+another rule, we can run it by providing its name, e.g., `make clean`. Later we
+will see use of more complex makefile.
 
 ### Cppcheck
 

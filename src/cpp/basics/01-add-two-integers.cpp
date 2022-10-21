@@ -5,7 +5,7 @@ using namespace std;
 // applications there could be naming conflict among various imported headers.
 // We can either use the convention std::cout or declare only the methods we
 // need:
-// using namespace std::cout;
+// using std::cout;
 
 int main()
 {

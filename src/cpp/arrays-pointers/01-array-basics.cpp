@@ -23,6 +23,7 @@ int main()
     // if the size of array is not known compile time, use heap dynamic array
 
     cout << "Size of data = " << sizeof(data) << " bytes\n";
+    cout << "Length of data array: " << sizeof(data) / sizeof(data[0]) << endl;
     // the above prints the size of the entire array
 
     return 0;
