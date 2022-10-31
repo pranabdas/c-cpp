@@ -27,7 +27,7 @@ int main()
     // everything below will run on both parent and child process
     // depending on the fork() return value, we can run task under child or parent
     // however, there is no guaranty which result will be printed first
-    
+
     if (child == -1) // fork() returns -1 on failure
     {
         cout << "fork() failed to create child process." << endl;

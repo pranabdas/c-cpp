@@ -25,9 +25,9 @@ int main()
                   // (1) the child process session leader,
                   // (2) child process becomes leader of process group,
                   // (3) it gets disassociated from its controlling terminal
-                
+
         if (chdir("/tmp") < 0) // parent process might not run in a temporary
-                               // path, it's a good idea to set the working 
+                               // path, it's a good idea to set the working
                                // directory to meet long term expectation
         {
             cout << "Could not change directory to '/tmp'\n";

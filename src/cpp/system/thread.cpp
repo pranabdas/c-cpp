@@ -1,4 +1,4 @@
-// compile: g++ -pthread --std=c++17 filename.cpp 
+// compile: g++ -pthread --std=c++17 filename.cpp
 #include <iostream>
 #include <thread>
 #include <vector>
@@ -7,9 +7,9 @@
 using std::cout;
 using std::endl;
 using std::generate;
-using std::vector;
-using std::thread;
 using std::ref;
+using std::thread;
+using std::vector;
 
 void thread_sum(vector<int> &, int, int, int &);
 
@@ -19,7 +19,7 @@ int main()
     // cout << numbers.size() << endl;
 
     generate(begin(numbers), end(numbers), []()
-             { return rand() % 10; });  
+             { return rand() % 10; });
 
     int result_t1 = 0;
     int result_t2 = 0;
