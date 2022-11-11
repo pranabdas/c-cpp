@@ -43,7 +43,13 @@ Compiler (GCC/Clang) flags for warnings: `-Wall`, `-Wextra`, `-Wpedantic`,
 
 ```console
 apt install cppcheck
-cppcheck --enable=all filename.cpp 
+cppcheck --enable=all filename.cpp
+```
+
+### Misc
+Cleanup (delete) all `a.out` from the `src` directory:
+```
+find /workspaces/c-cpp/src -type f -name a.out -delete
 ```
 
 ## Resources
