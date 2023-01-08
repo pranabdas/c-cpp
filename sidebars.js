@@ -34,6 +34,17 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Algorithms",
+      collapsed: true,
+      link: {
+        type: "generated-index",
+      },
+      items: [
+        "algorithms/big-o",
+      ],
+    },
+    {
+      type: "category",
       label: "Data structure",
       collapsed: true,
       link: {
