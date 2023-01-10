@@ -1,0 +1,54 @@
+---
+title: Sorting algorithms
+sidebar_label: Sorting
+---
+
+Here we will look into some of the sorting algorithms and how they scales with
+increasing problem size.
+
+### Permutation sort
+
+Given an array, we create all possible permutations of the array items, then
+check if the one of those permutations are sorted. This algorithm is extremely
+inefficient, there are $n!$ possible permutations of $n$ items. Even for a
+relatively small number of input size 20, $(20)! \approx 2 \times 10^{18}$. For
+each step, we also need about $\mathcal{O}(n)$ checks to find out if one of the
+permutations is sorted.
+
+### Selection sort
+
+Here is how the selection sort works: say we are given the following array to
+sort: [5, 8, 2, 3, 7, 9]
+
+**Step 1:** find the biggest element in first (n - 1) element and swap it with
+the last element if it is bigger than the last element else do nothing
+
+**Step 2:** find biggest element in first (n - 2) element, and swap it with
+(n-1)th element if it is bigger
+
+Below is an implementation in C++.
+
+import CodeBlock from '@theme/CodeBlock';
+import selection_sort from '!!raw-loader!/src/cpp/misc/selection_sort.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/misc/selection_sort.cpp" showLineNumbers>{selection_sort}</CodeBlock>
+
+### Insertion sort
+
+import insertion_sort from '!!raw-loader!/src/cpp/misc/insertion_sort.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/misc/insertion_sort.cpp" showLineNumbers>{insertion_sort}</CodeBlock>
+
+Both selection sort and insertion sort has time complexity $\mathcal{O}(n^2)$.
+
+### Merge sort
+
+import merge_sort from '!!raw-loader!/src/cpp/misc/merge_sort.cpp';
+
+<CodeBlock language="cpp" title="src/cpp/misc/merge_sort.cpp" showLineNumbers>{merge_sort}</CodeBlock>
+
+Merge sort has time complexity $\mathcal{O}(n \log n)$.
+
+### Resources
+- [MIT OCW Lecture Video](https://www.youtube.com/watch?v=oS9aPzUNG-s&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=4) (<a target="_blank" href={require('/resources/MIT6_006S20_r03_sorting.pdf').default}>related notes</a>)
+- [Linear Sorting lecture video from MIT OCW](https://www.youtube.com/watch?v=yndgIDO0zQQ&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=7) (<a target="_blank" href={require('/resources/MIT6_006S20_r05_linear_sorting.pdf').default}>related notes</a>)

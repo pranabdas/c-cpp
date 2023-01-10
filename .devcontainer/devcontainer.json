@@ -22,15 +22,15 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"bceskavich.theme-dracula-at-night",
-        "streetsidesoftware.code-spell-checker",
-        "SirTori.indenticator",
-        "jeff-hykin.better-cpp-syntax",
-        "ms-vscode.cpptools",
-        "ms-vscode.cpptools-extension-pack",
-        "ms-vscode.cpptools-themes",
-        "twxs.cmake",
-        "ms-vscode.cmake-tools",
-        "unifiedjs.vscode-mdx",
+				"streetsidesoftware.code-spell-checker",
+				"SirTori.indenticator",
+				"jeff-hykin.better-cpp-syntax",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.cpptools-themes",
+				"twxs.cmake",
+				"ms-vscode.cmake-tools",
+				"unifiedjs.vscode-mdx",
 				"mutantdino.resourcemonitor"
 			],
 			"settings": {
@@ -63,5 +63,7 @@
 	"remoteUser": "vscode",
 	"features": {
 		"node": "18"
-	}
+	},
+	"postCreateCommand": "npm install",
+	"waitFor": "postCreateCommand"
 }

@@ -41,6 +41,7 @@ module.exports = {
       },
       items: [
         "algorithms/big-o",
+        "algorithms/sorting",
       ],
     },
     {
