@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkc_cpp=self.webpackChunkc_cpp||[]).push([[888],{6271:t=>{t.exports=JSON.parse('{"title":"Data structure","slug":"/category/data-structure","permalink":"/c-cpp/category/data-structure","navigation":{"previous":{"title":"Sorting","permalink":"/c-cpp/algorithms/sorting"},"next":{"title":"Struct","permalink":"/c-cpp/data-structure/struct"}}}')}}]);
