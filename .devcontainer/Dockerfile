@@ -22,11 +22,14 @@ RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
 # [Optional] Uncomment this section to install additional packages.
 RUN apt update && export DEBIAN_FRONTEND=noninteractive \
     && apt -y install --no-install-recommends \
+        cppcheck \
         gcc \
+        gdb \
         gfortran \
         libblas-dev \
         libboost-dev \
         # libboost-all-dev \
         libeigen3-dev \
         liblapack-dev \
-        sqlite3
+        sqlite3 \
+        valgrind

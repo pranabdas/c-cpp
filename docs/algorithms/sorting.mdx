@@ -47,7 +47,39 @@ import merge_sort from '!!raw-loader!/src/cpp/misc/merge_sort.cpp';
 
 <CodeBlock language="cpp" title="src/cpp/misc/merge_sort.cpp" showLineNumbers>{merge_sort}</CodeBlock>
 
-Merge sort has time complexity $\mathcal{O}(n \log n)$.
+Merge sort has time complexity $\mathcal{O}(n \log n)$. Note that for any
+comparison model, there are $n!$ possible outcomes for a problem size $n$.
+Minimum height of such as descision tree would be $\log(n!) \approx n \log n$.
+Therefore, merge sort is best possible (or close to best possible) solution for
+any sorting algorithm based on comparison model. Can we do better?
+
+### Linear sort
+
+It takes constant amount of time to access a memory location (RAM) by its
+address. If we are able to build a direct access array (DAA), we can get its
+elements by its index. We can build key value pairs, where keys are index of an
+DAA. If we have to search through the array, we can get an item in constant
+time. Say we have $n$ items and the key space is $u$. If $n$ and $u$ are of the
+same order, then such an algorithm would be efficient. Example: say we have
+student IDs (keys) based on their ranking.
+
+What if key space is of the order of $n^2$? In that case, we can break down each
+key in a tuple of (a, b), where `a = u / n` (integer division), and `b = u % n`
+(remainder of modulo division). Example: say we have a list of 5 numbers:
+{12, 17, 3, 22, 24}, we can transform them into {(2, 2), (3, 2), (0, 3), (4,2),
+(4, 4)}. Now, if we need to sort them (we can call tuple sort), we need to sort
+first based on the least significant tuple digit (here second digit), and we
+obtain: {(2, 2), (3, 2), (4, 2), (0, 3), (4, 4)}. Finally, we sort by the most
+significant tuple digit: {(0, 3), (2, 2), (3, 2), (4, 2), (4, 4)}.
+
+:::info
+
+Note that we need a stable sorting algorithm to sort above tuple, i.e., it
+maintains the order of numbers in the original input list. If the input tuple
+was {(2, 3), (2, 1)} after sorting based on most significant tuple digit (i.e.,
+first digit), it should return {(2, 3), (2, 1)}.
+
+:::
 
 ### Resources
 - [MIT OCW Lecture Video](https://www.youtube.com/watch?v=oS9aPzUNG-s&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=4) (<a target="_blank" href={require('/resources/MIT6_006S20_r03_sorting.pdf').default}>related notes</a>)

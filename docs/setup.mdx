@@ -61,11 +61,75 @@ argument, the first rule will run, which is in this case `all`. We can run
 another rule, we can run it by providing its name, e.g., `make clean`. Later we
 will see use of more complex makefile.
 
+### Debugging
+
+```bash
+sudo apt update && sudo apt install gdb
+```
+
+We can use `gdb` to debug our program. We can embeed debugging information to
+our code by using `-g` flag. It might be helpful also to disable optimizations
+with `-O0` while debugging. We compile the program:
+
+```bash
+gcc -g -O0 -Wall filename.c -o filename.o
+```
+
+Using `gdb`:
+```bash
+gdb filename.o
+```
+
+**Useful gdb commands:**
+
+Commands                     | Description
+---------------------------- | -----------
+break/b `line-number`        | create breakpoint at specific line
+break `filename:line-number` | create breakpoint at specific line and file
+run/r                        | run program
+c                            | continue execution
+next                         | execute next line
+step/s                       | execute next line or step into function
+quit/q                       | quit gdb
+print expression             | print current value of a specified expression
+help [command]               | in-program help
+bt                           | print the stack trace
+clear `line-number`          | clear break point
+clear `filename:line-number` | clear break point in a specific file and line
+info/i break/b               | list all break points
+del `breakpoint Num`         | delete a break point
+del `start-br-pt`-`end-br-pt`| delete break points from `start-breakpoint-Num` to `end-breakpoint-Num`
+
 ### Cppcheck
 
 Sometimes I will be using `cppcheck` to debug codes as well.
 
 ```bash
 apt install cppcheck
-cppcheck --enable=all filename.cpp 
+cppcheck --enable=all filename.cpp
 ```
+
+### Valgrind
+
+Install valgrind in Ubuntu/Debian:
+```bash
+apt install valgrind
+```
+
+Valgrind is a memory profiling tool (includes memcheck, cachegrind, callgrind,
+etc). First compile your program with debug flag:
+```bash
+gcc -g filename.c
+```
+
+```bash
+valgrind ./a.out
+valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./a.out
+```
+
+Valgrind can also detect:
+- invalid pointer use
+- use of uninitialized variables
+- double frees
+
+Valgrind does not check bounds on statically allocated arrays.

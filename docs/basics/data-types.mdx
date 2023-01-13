@@ -33,3 +33,17 @@ A decimal integer cannot start with `0`, in that case it is considered octal
 base. For example, `076` denotes `63` in decimal notation.
 
 :::
+
+:::tip Good to know
+
+For numeric data types that span multiple bytes, the order of arrangement of
+bytes is important. Depending on the processor architecture, there are two
+formats: big endian and little endian.
+
+**Big endian:** the most significant bits occupy the lower address. This
+representation is used in powerpc processor.
+
+**Little endian:** the least significant bits occupy the lower address. This
+format is used in all **x86** compatible processors.
+
+:::
