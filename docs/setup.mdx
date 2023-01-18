@@ -68,8 +68,8 @@ sudo apt update && sudo apt install gdb
 ```
 
 We can use `gdb` to debug our program. We can embeed debugging information to
-our code by using `-g` flag. It might be helpful also to disable optimizations
-with `-O0` while debugging. We compile the program:
+our code by using `-g` or `-g3` flag. It might be helpful also to disable
+optimizations with `-O0` while debugging. We compile the program:
 
 ```bash
 gcc -g -O0 -Wall filename.c -o filename.o

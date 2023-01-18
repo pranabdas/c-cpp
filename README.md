@@ -30,9 +30,9 @@ executable name by using the `-o` flag:
 gcc filename.c -o program_name
 ```
 
-For complex programs, you can use `-g` flag to generate debugging information.
-`-O` flag can be used to optimize the executable file (`-O2`, `-O3` denotes
-various levels of optimization).
+For complex programs, you can use `-g` (or `-g3`) flag to embed debugging
+information. `-O` flag can be used to optimize the executable file (`-O2`, `-O3`
+denotes various levels of optimization).
 
 Compiler (GCC/Clang) flags for warnings: `-Wall`, `-Wextra`, `-Wpedantic`,
 `-Wunused`.

@@ -79,6 +79,7 @@ module.exports = {
         "misc/arg-parsing",
         "misc/bit-shifting",
         "misc/multiple-return",
+        "misc/dynamic-programming",
       ],
     },
     {
@@ -92,6 +93,7 @@ module.exports = {
         "coding-practice/monte-carlo",
       ],
     },
+    "resources",
     "license",
   ],
 };
