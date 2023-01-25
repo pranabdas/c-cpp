@@ -52,9 +52,12 @@ module.exports = {
         type: "generated-index",
       },
       items: [
+        "data-structure/ds-intro",
         "data-structure/struct",
         "data-structure/enum",
         "data-structure/complex-number",
+        "data-structure/linked-list",
+        "data-structure/binary-trees",
       ],
     },
     {

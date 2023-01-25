@@ -1,7 +1,13 @@
 // linked lists are dynamic collection
 // adding new item has O(1) complexity, while searching items in the list has
 // O(N) cost. In comparison, inserting item in a regular array is O(N) while
-// array search is o(1)
+// array search is O(1). If we use dynamic array instead of static array, we
+// start with a specific size of the array, once we run out of space, we
+// allocate a new array with double the previous size of array. We copy the
+// first half of the array from previous array, and add the new element. In this
+// we need to double about log(N) time for N item, so half of the item is copied
+// once, quarter of item is moved twice, and so on, we will see that this is
+// still a O(N) complexity to build such array.
 // linked lists are used where the array size is not known compile time, and
 // we do not need random access to the items in it.
 // Use cases: list of navigational nodes (going from one point to another in a
