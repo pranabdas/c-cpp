@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkc_cpp=self.webpackChunkc_cpp||[]).push([[320],{9819:e=>{e.exports=JSON.parse('{"title":"File IO","slug":"/category/file-io","permalink":"/c-cpp/category/file-io","navigation":{"previous":{"title":"Complex number","permalink":"/c-cpp/data-structure/complex-number"},"next":{"title":"File IO basics","permalink":"/c-cpp/file-io/"}}}')}}]);
