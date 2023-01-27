@@ -1,6 +1,6 @@
 #include <stdio.h>  // printf
 #include <stdlib.h> // malloc
-#include <string.h> // strcpy
+#include <string.h> // strcpy, strcmp
 #include <assert.h> // assert
 
 typedef struct todo_list
@@ -15,6 +15,7 @@ todo_list *create_new_item(char item_name[], int number_of_item, int is_importan
 {
     todo_list *list;
     list = malloc(sizeof(todo_list));
+    assert(list);
     strcpy(list->item_name, item_name);
     list->number_of_item = number_of_item;
     list->is_important = is_important;
