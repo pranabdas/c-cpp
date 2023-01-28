@@ -58,6 +58,7 @@ module.exports = {
         "data-structure/complex-number",
         "data-structure/linked-list",
         "data-structure/binary-trees",
+        "data-structure/heaps",
       ],
     },
     {

@@ -29,10 +29,6 @@
   --ifm-table-row-hover-color: rgba(0, 0, 0, 0.01);
 }
 
-body {
-  tab-size: 4;
-}
-
 html[data-theme='dark'] {
   --ifm-background-color: var(--color-black);
   --ifm-background-surface-color: var(--color-black);
@@ -237,4 +233,12 @@ a.card:hover {
 
 .theme-admonition a:hover {
   text-decoration: underline;
+}
+
+body {
+  tab-size: 4;
+}
+
+.hash-link:hover {
+  text-decoration: none;
 }
