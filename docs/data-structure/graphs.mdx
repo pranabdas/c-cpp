@@ -1,0 +1,61 @@
+---
+title: Graphs
+---
+
+Graphs are everywhere around us: computer networks, road networks, social
+networks, electronic circuits, molecular structure etc.
+
+**Terminology:**
+
+$G = (V, E)$
+
+$V \Rightarrow \text{Vertices}$
+
+$E \Rightarrow \text{Edges} \subseteq V \times V$
+
+Edges can be directed or undirected. Say we have two vertices $v$ and $w$.
+Possible Edges could be $e = (w, v)$ or $e' = (v, w)$. In case of undirected
+edges, $e = \{v, w\}$. We will use the set notation where order does not matter.
+
+In case of undirected graph, number of edges:
+
+$$
+|E| \le \binom{|V|/2}{2} = \mathcal{O}(|V|^2)
+$$
+
+If we have directed graph, there will be factor of 2, still
+$\mathcal{O}(|V|^2)$.
+
+### Graph representation
+
+How can we store a graph in the computer? Few of the options are:
+- Edge list
+- Adjacency list
+- Adjacency matrix
+
+**Adjacency matrix:** say we have a graph $G = (V, E)$ with $n$ vertices and $m$
+edges. We can represent $G$ using and $n \times n$ matrix $M$, where element
+$M[i, j] = 1$ if $(i, j)$ is an edge of $G$, and $0$ if it is not an edge. This
+representation allows faster look up, and updates for edge insertion and
+deletion. However, it may use excessive space for sparse graphs.
+
+**Adjacency list:** We can more efficiently store sparse graphs by using linked
+lists to store neighbors of each vertex.
+
+**Sparse vs. dense:** usually sparse graphs number of edges
+$|E| \approx \mathcal{O}(|V|)$, while for dense graphs
+$|E| \approx \mathcal{O}(|V|^2)$.
+
+### Path
+$p = (v_1, v_2, \dots, v_k)$ where
+$(v_i, v_{i+1}) \in E~\forall~i \in \{1, 2, \dots, k-1\}$.
+
+$l(p) \Rightarrow \text{length}$
+
+$\delta(p) \Rightarrow \text {length of shortest path}$
+
+### Resources
+
+- [MIT OCW Lecture](https://www.youtube.com/watch?v=oFVYVzlvk9c&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=13)
+- [The Algorithm Design Manual by Steven S. Skiena](https://link.springer.com/book/10.1007/978-3-030-54256-6)
+- [Graph Theory videos by William Fiset](https://www.youtube.com/watch?v=DgXR2OWQnLc&list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P)

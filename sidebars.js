@@ -59,6 +59,7 @@ module.exports = {
         "data-structure/linked-list",
         "data-structure/binary-trees",
         "data-structure/heaps",
+        "data-structure/graphs",
       ],
     },
     {

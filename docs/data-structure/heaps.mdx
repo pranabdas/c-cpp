@@ -25,7 +25,7 @@ find maximum element but we need to shift items after insertion.
 will be removed in a sorted order.
 
 $$
-T_{build}(n) + n \cdot T_{delete\_max} \le n (T_{insert} + T_{delete\_max})
+T_{\text{build}}(n) + n \cdot T_{\text{delete\_max}} \le n (T_{\text{insert}} + T_{\text{delete\_max}})
 $$
 
 If we implement priority queue interface with set AVL, it will take
@@ -57,21 +57,22 @@ I, J. This is an implicit data structure without any pointers. We can find left
 and right child by using index arithmetic.
 
 $$
-left\_child(i) = 2 * i + 1
+\text{left\_child}(i) = 2 * i + 1
 $$
 $$
-right\_child(i) = 2 * i + 2
+\text{right\_child}(i) = 2 * i + 2
 $$
 $$
-parent(i) = \left\lfloor \frac{i - 1}{2} \right\rfloor
+\text{parent}(i) = \left\lfloor \frac{i - 1}{2} \right\rfloor
 $$
 
-$\lfloor~\rfloor$ denotes floor.
+$\lfloor~\rfloor$ denotes [floor](
+https://en.wikipedia.org/wiki/Floor_and_ceiling_functions).
 
 **Binary heap (Q):** an array (Q) representing complete binary tree where every
 node `i` satisfies **max-heap** property: $Q[i] \ge Q[j]$ for
-$j \in \{left(i), right(i)\}$. This follows $Q[i] \ge Q[j]$ for any node `j` in
-subtree(i).
+$j \in \{\text{left}(i), \text{right}(i)\}$. This follows $Q[i] \ge Q[j]$ for
+any node `j` in subtree(i).
 
 **find_max** is very easy, it must be the root, first element in the array.
 
@@ -102,10 +103,12 @@ max_heapify_up(i) {
 - recurse on `j`.
 
 ### Heap sort
+
 We can start with an empty binary heap, increase it's size by one and
 repeatedly absorb elements of an unsorted array. Later repeatedly apply
 `delete_max()` to sort an array, it's called heap sort.
 
 
 ### Resources
+
 - [MIT OCW Binary Heaps Lecture](https://www.youtube.com/watch?v=Xnpo1atN-Iw&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=12) (<a target="_blank" href={require('/resources/MIT6_006S20_r08_binary_heap.pdf').default}>related notes</a>)

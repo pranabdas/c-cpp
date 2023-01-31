@@ -7,3 +7,4 @@ title: Resources
 - [Analysis of Algorithms](https://www.youtube.com/playlist?list=PL1BaGV1cIH4UhkL8a9bJGG356covJ76qN)
 - [Algorithms by Sai Simonson](https://www.youtube.com/playlist?list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm)
 - [Analysis of Algorithms by Steven Skiena](https://www.youtube.com/playlist?list=PLOtl7M3yp-DXbHTFe_w9zFPXeau28CDao)
+- <a target="_blank" href={require('/resources/DSA_lecture_notes_Bullinaria.pdf').default}>Lecture Notes on Data Structure and Algorithms by John Bullinaria</a>
