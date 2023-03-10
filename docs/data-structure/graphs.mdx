@@ -20,7 +20,7 @@ edges, $e = \{v, w\}$. We will use the set notation where order does not matter.
 In case of undirected graph, number of edges:
 
 $$
-|E| \le \binom{|V|/2}{2} = \mathcal{O}(|V|^2)
+|E| \le \binom{|V|}{2} = \mathcal{O}(|V|^2)
 $$
 
 If we have directed graph, there will be factor of 2, still
@@ -46,6 +46,9 @@ lists to store neighbors of each vertex.
 $|E| \approx \mathcal{O}(|V|)$, while for dense graphs
 $|E| \approx \mathcal{O}(|V|^2)$.
 
+In real world applications, most graphs we encounter are sparse, and therefore
+adjacency list is the primary data structure to store such graphs.
+
 ### Path
 $p = (v_1, v_2, \dots, v_k)$ where
 $(v_i, v_{i+1}) \in E~\forall~i \in \{1, 2, \dots, k-1\}$.
@@ -54,8 +57,45 @@ $l(p) \Rightarrow \text{length}$
 
 $\delta(p) \Rightarrow \text {length of shortest path}$
 
-### Resources
+## Graph traversal
+
+In a graph search, we are provided with the graph and a starting/ source vertex.
+Our goal is to find everything findable, i.e., all the vertex by walking along
+various edges. Our algorithm should be efficient, meaning we should not find
+every edges or vertices too many times. The complexity of search should be
+$\mathcal{O}(m + n)$, where $n$ is the number of vertices and $m$ is the number
+of edges in the graph.
+
+### Breadth-first search (BFS)
+
+Depending on the order of traversal, there are two class of traversal
+algorithms: breadth first search and depth first search. During search all
+vertices goes from *undiscovered* to *discovered* to *explored*. Once we
+discover a new vertex, we can store them either in a queue or stack for
+exploration (where we walk along all the edges and further discover more
+vertices). If we store the vertices in a queue (i.e., first-in first-out), we
+explore the oldest unexplored vertex first. In this way, our exploration slowly
+radiate out from the starting vertex, defining breadth-first search. Here we
+explore vertices in layers. Source vertex is layer 0. All the neighbors of
+source vertex is layer 1, and next neighbors are layer 2 and so on. Easy to
+compute shortest path.
+
+### Depth-first search (DFS)
+
+On the other hand, if we store just discovered vertices using a stack (i.e.,
+last-in first-out), we explore the new neighboring vertices first if one is
+available. In this case, exploration quickly wander away from the starting
+vertex, defining depth-first search. Once of nice advantages here is that we do
+not need stack container explicitly, we can use recursion instead.
+
+## Resources
 
 - [MIT OCW Lecture](https://www.youtube.com/watch?v=oFVYVzlvk9c&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=13)
 - [The Algorithm Design Manual by Steven S. Skiena](https://link.springer.com/book/10.1007/978-3-030-54256-6)
 - [Graph Theory videos by William Fiset](https://www.youtube.com/watch?v=DgXR2OWQnLc&list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P)
+- [Coursera: Graph Search, Shortest Paths, and Data Structures by Tim Roughgarden](https://www.coursera.org/learn/algorithms-graphs-data-structures)
+- [Boost Graph Library](https://www.boost.org/doc/libs/1_81_0/libs/graph/doc/table_of_contents.html)
+- [Dijkstra Algorithm](https://youtu.be/GazC3A4OQTE)
+- [A* Algorithm](https://youtu.be/ySN5Wnu88nE)
+- [Route Planning in Large Transportation Networks](https://youtu.be/B3wKfJAVRkg)
+- [Graph analysis using NetworkX in Python](https://networkx.org/documentation/stable/) ([Example Jupyter Notebook](https://github.com/pranabdas/python-tutorial/blob/main/notebooks/graph-analysis-networkx.ipynb))
