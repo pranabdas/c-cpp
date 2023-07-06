@@ -85,6 +85,7 @@ module.exports = {
         "misc/bit-shifting",
         "misc/multiple-return",
         "misc/dynamic-programming",
+        "misc/mpi",
       ],
     },
     {
