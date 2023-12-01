@@ -6,4 +6,4 @@ Compress images to webp format.
 cwebp filename.png -o filename.webp
 ```
 
-For more details visit <https://developers.google.com/speed/webp/download>
+For more details visit https://developers.google.com/speed/webp/download

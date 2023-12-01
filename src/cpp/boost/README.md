@@ -1,5 +1,5 @@
 # Boost
-<https://www.boost.org/>
+https://www.boost.org/
 
 Installation in Ubuntu/Debian:
 ```console

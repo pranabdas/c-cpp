@@ -1,6 +1,6 @@
 # Eigen (C++ linear algebra library)
 
-Website: <http://eigen.tuxfamily.org/>
+Website: http://eigen.tuxfamily.org/
 
 Download eigen lib:
 ```console
@@ -30,4 +30,4 @@ file:
 ```
 
 When installed via `apt` the library is placed under `/usr/include/eigen3` while
-the compiler by default search in `/usr/include`. 
+the compiler by default search in `/usr/include`.
