@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkc_cpp=self.webpackChunkc_cpp||[]).push([[1242],{5718:e=>{e.exports=JSON.parse('{"title":"Basics","slug":"/category/basics","permalink":"/c-cpp/category/basics","navigation":{"previous":{"title":"Setup","permalink":"/c-cpp/"},"next":{"title":"Hello world","permalink":"/c-cpp/basics/hello-world"}}}')}}]);

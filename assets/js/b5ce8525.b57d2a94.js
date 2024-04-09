@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkc_cpp=self.webpackChunkc_cpp||[]).push([[4710],{5776:e=>{e.exports=JSON.parse('{"title":"Miscellaneous","slug":"/category/miscellaneous","permalink":"/c-cpp/category/miscellaneous","navigation":{"previous":{"title":"File IO basics","permalink":"/c-cpp/file-io/"},"next":{"title":"Argument parsing","permalink":"/c-cpp/misc/arg-parsing"}}}')}}]);
