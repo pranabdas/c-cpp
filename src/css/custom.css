@@ -31,14 +31,13 @@
 
 html[data-theme='dark'] {
   --ifm-background-color: var(--color-black);
-  --ifm-background-surface-color: var(--color-black);
   --border-color: #3F4554;
   --ifm-font-color-base: var(--color-white);
   --ifm-alert-color: var(--color-white);
   --ifm-menu-color: var(--color-white);
   --ifm-toc-link-color: var(--color-white);
   --ifm-tabs-color: var(--color-white);
-  --ifm-background-surface-color: #161b22;
+  --ifm-background-surface-color: #081020;
   --ifm-table-row-hover-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -60,7 +59,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 html[data-theme='dark'] .footer {
-  background-color: #161b22;  /* match the navbar color in dark mode */
+  background-color: var(--ifm-background-surface-color);
 }
 
 .header-github-link:hover {
@@ -241,4 +240,30 @@ body {
 
 .hash-link:hover {
   text-decoration: none;
+}
+
+.navbar__title {
+  background: linear-gradient(
+    to right,
+    #0894ff,
+    #c959dd 33%,
+    #ff2e54 67%,
+    #ff9004
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar__title:hover {
+  background: linear-gradient(
+    to left,
+    #0894ff,
+    #c959dd 33%,
+    #ff2e54 67%,
+    #ff9004
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
