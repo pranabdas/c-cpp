@@ -102,13 +102,13 @@ const config = {
                 target: "_self",
               },
               {
-                label: "Rust Programming",
-                to: site_url + "/rust/",
+                label: "Quantum Espresso Tutorial",
+                to: site_url + "/espresso/",
                 target: "_self",
               },
               {
-                label: "Quantum Espresso Tutorial",
-                to: site_url + "/espresso/",
+                label: "Rust Programming",
+                to: site_url + "/rust/",
                 target: "_self",
               },
               {
