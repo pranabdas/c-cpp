@@ -31,7 +31,7 @@ exploit the high-speed cache-memory in modern CPUs.
 
 1. Size of array must be known beforehand
 2. Resizing array is expensive
-3. Insertion/deletion requires shifting subsequent elements
+3. Insertion/<wbr/>deletion requires shifting subsequent elements
 
 ### Dynamic array
 
@@ -63,8 +63,8 @@ arrays.
 Searching in a linked list can be done iteratively or recursively. Searching in
 sorted array could be done by binary search in $\mathcal{O}(\log n)$. Access is
 $\mathcal{O}(n)$ since we need to traverser from the head; compared to
-$\mathcal{O}(1)$ in case of arrays. Insertion/deletion in head is
-$\mathcal{O}(1)$. Insertion/deletion elsewhere is $\mathcal{O}(n)$.
+$\mathcal{O}(1)$ in case of arrays. Insertion/<wbr/>deletion in head is
+$\mathcal{O}(1)$. Insertion/<wbr/>deletion elsewhere is $\mathcal{O}(n)$.
 
 Pros of linked list:
 1. No overflow
@@ -81,14 +81,14 @@ Containers to store items, we access them in the order they came.
 
 Stacks and Queues can be implemented using arrays or linked lists.
 
-### Dictionary/ Dynamic set operation
+### Dictionary/Dynamic set operation
 Supports operations:
 1. `Search(Set, k)`: returns pointer to an item `x` such that `key[x] = k`, or
 `nil` if no such element exists.
 2. `Insert(S, x)`
 3. `Delete(S, x)`
-4. `Min(S)`, `Max(S)` (smallest/largest key)
-5. `Predecessor(S, x)`/ `Successor(S, x)`
+4. `Min(S)`, `Max(S)` (smallest/<wbr/>largest key)
+5. `Predecessor(S, x)`/<wbr/>`Successor(S, x)`
 
 There are variety of implementation of these dictionary operations, each of
 which yield different time complexities of different operations.
@@ -99,8 +99,8 @@ Example: Array based sets: unsorted arrays
 can use dynamic array, no need to worry about resizing
 3. `Delete(S, x)` - copy nth (last item) to the `x`-th spot, $\mathcal{O}(1)$
 4. `Min/Max` - sequential search $\mathcal{O}(n)$
-5. `Successor/Predecessor` - sequential search $\mathcal{O}(n)$ (previous/next
-index is not successor/predecessor)
+5. `Successor/Predecessor` - sequential search $\mathcal{O}(n)$
+(previous/<wbr/>next index is not successor/<wbr/>predecessor)
 
 If we use sorted array, searching could be done by binary search and complexity
 reduces to $\mathcal{O}(\log n)$.
@@ -109,7 +109,8 @@ reduces to $\mathcal{O}(\log n)$.
 complexity. `Min/Max` is easy $\mathcal{O}(1)$. `Successor/Predecessor` is also
 $\mathcal{O}(1)$.
 
-We can implement dictionary using singly/doubly sorted/unsorted linked list:
+We can implement dictionary using singly/<wbr/>doubly sorted/<wbr/>unsorted
+linked list:
 
 Dictionary Operation | Singly unsorted | Singly sorted | Doubly unsorted | Doubly sorted
 -------------------- | --------------- | ------------- | --------------- | -------------

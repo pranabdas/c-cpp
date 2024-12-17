@@ -138,10 +138,7 @@ maintain the height balance. Skew of a node is defined as
 any node to be either 0, or 1 or -1. If we can maintain height balance,
 $\mathcal{O}(h) = \mathcal{O}(\log n)$, indeed.
 
-<picture>
-  <source type="image/webp" srcSet={require("/img/tree-rotation.webp").default} />
-  <img src={require("/img/tree-rotation.png").default} alt="tree-rotation" />
-</picture>
+<img src={require("/img/tree-rotation.webp").default} class="inv-hue-rot-180" alt="tree-rotation" />
 
 After rotation we need to update the subtree properties of A, B, and all their
 ancestors, which could be done in $\mathcal{O}(\log n)$ time.
