@@ -54,7 +54,6 @@ const config = {
               {
                 label: "C and C++ Programming",
                 to: "/",
-                target: "_self",
               },
               {
                 label: "~ ~ ~ Other Docs ~ ~ ~",
