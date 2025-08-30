@@ -6,6 +6,9 @@
 
 Follow the tutorial here - <https://pranabdas.github.io/c-cpp/>
 
+If you are using an older browser, and this site does not work, you may try an
+[older version of this site](https://v0--c-cpp.netlify.app/).
+
 ## Quick start
 
 Compile:
