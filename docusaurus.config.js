@@ -10,11 +10,15 @@ const config = {
   url: site_url,
   baseUrl: "/c-cpp/", // must have a trailing "/"
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
   organizationName: "pranabdas", // Usually your GitHub org/user name.
   projectName: "c-cpp", // Usually your repo name.
   titleDelimiter: "•",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -191,7 +195,7 @@ const config = {
 
   stylesheets: [
     {
-      href: "https://pranab.pages.dev/assets/fonts/katex/0.16.22/katex.min.css",
+      href: "https://pranab.pages.dev/assets/fonts/katex/0.16.25/katex.min.css",
       type: "text/css",
     },
   ],
