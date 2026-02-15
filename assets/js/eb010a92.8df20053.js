@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkc_cpp=self.webpackChunkc_cpp||[]).push([["2916"],{7392(e){e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"Basics","slug":"/category/basics","permalink":"/c-cpp/category/basics","sidebar":"docs","navigation":{"previous":{"title":"Setup","permalink":"/c-cpp/"},"next":{"title":"Hello world","permalink":"/c-cpp/basics/hello-world"}}}}')}}]);
